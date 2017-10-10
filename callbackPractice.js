@@ -22,6 +22,7 @@ and what you should write is the sayHi function that makes the code above work,
 
 // 1. Write a function called first that returns the first item of the array using a callback function
 
+ var first = (arr,cb) => cb(arr[0])
   // Code Here
 
   
@@ -36,7 +37,7 @@ first(names, function(firstName){
 // 2. Write a function called last which returns the last item of the array using a callback function.
 
   //Code Here
-
+var last = (arr,cb) => cb(arr[arr.length-1])
 
 
 last(names, function(lastName){
@@ -49,7 +50,7 @@ last(names, function(lastName){
 // 3. Write a function called multiply that multiplies two numbers. Invoke the callback with the result of the multiplication. 
 
   //Code Here
-
+var multiply = (num1,num2,cb) => cb(num1*num2)
 
 
 multiply(4, 3, function(answer){
@@ -63,7 +64,7 @@ multiply(4, 3, function(answer){
 // If the name does not exist, invoke the callback with false as an argument.
 
   //Code Here 
-
+  var contains = (arr, str, cb) => cb(arr.indexOf(str)!= -1)
 
 
 
@@ -93,7 +94,9 @@ uniq(names, function(uniqArr){
 
     //Code Here 
 
-
+var each = (arr, cb) => {
+  arr.map()
+}
 
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
