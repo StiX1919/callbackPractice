@@ -82,7 +82,10 @@ contains(names, 'Colt', function(result){
 // Invoke the callback with the modified array as an argument.
 
   //Code Here
-
+var uniq = (name,cb) => {
+  var x =name.filter((item,pos)=>name.indexOf(item)==pos)
+  cb(x)
+}
 
 
 uniq(names, function(uniqArr){
