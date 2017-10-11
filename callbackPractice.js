@@ -98,7 +98,7 @@ uniq(names, function(uniqArr){
     //Code Here 
 
 var each = (arr, cb) => {
-  arr.map()
+  arr.map( x => cb(x,arr.indexOf(x)))
 }
 
 each(names, function(item, indice){
@@ -111,7 +111,13 @@ each(names, function(item, indice){
 // When the correct user object is found, invoke the callback with the user object as an argument.
 
 // Code here
-
+var getUserById = (arr,iD,cb) => {
+  for(i=0;i<arr.length;i++){
+    if(arr[i].id===iD){
+      cb(arr[i])
+    }
+  }
+}
 
 
 var users = [
